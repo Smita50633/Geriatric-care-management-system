@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles1.css" />
+    <title>Geriatric Management System</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+    </style>
+  </head>
+  <body>
+
+    <header>
+        <nav class="section_container nav__container">
+            <div class="nav__logo">Geriatric<span>Care</span></div>
+            <ul class="nav__links">
+                <li class="link"><a href="#home">Home</a></li>
+                <li class="link"><a href="#about">About Us</a></li>
+                <li class="link"><a href="register.html">Register</a></li>
+                <li class="link"><a href="loginpage.php">Login</a></li>
+            </ul>
+        </nav>
+        <br><br>
+        <header class="section_container header__container" id="home">
+            <div class="header__content">
+                <h1>Compassionate Care for Our Elders</h1>
+                <p>
+                    At Geriatric Care Management System, we believe in compassionate care backed by innovation. 
+                    Together, let’s create a future where our elders receive the love, respect, and care they deserve.
+                </p>
+                <button class="btn" onclick="location.href='services.html'">Explore Services</button>
+            </div>
+        
+        <div class="header__img">
+          <img src="elder.jpg" alt="omg">
+        </div>
+      </div>
+    </header>
+
+    <section class="section_container service_container" id="service">
+    
+        <h2 class="section__header">Our Services</h2>
+        
+      <div class="service__grid">
+        <div class="service__card">
+          <span><i class="ri-capsule-line"></i></span>
+          <h4>Medication Management</h4>
+          <p>Ensure proper medication schedules and reminders for elders.</p>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-alarm-warning-line"></i></span>
+          <h4>Emergency Alert System</h4>
+          <p>Instant emergency alerts for emergency contacts.</p>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-mind-map"></i></span>         
+           <h4>Memory & Brain Training Games</h4>
+          <p>Enhance cognitive skills with engaging activities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section_container about_container" id="about">
+      <div class="about__content">
+        <h2 class="section__header">About Us</h2>
+        <p>
+            The idea for our Geriatric Management System came from a deep concern for the challenges that elderly individuals face in managing their health, daily tasks, and overall well-being. Many of us have elderly family members who live far away, and we’ve personally witnessed the difficulty of ensuring their health and care are being properly managed. This gave us the inspiration to develop a solution that could provide support to the elderly and their families, especially those who may not always be nearby.<br> In our observations, we noticed that the elderly population often struggles with keeping track of their health records, scheduling medical appointments, managing medication, and dealing with the complexities of healthcare systems. On top of that, caretakers are often burdened with organizing these tasks, leaving them stressed and overwhelmed. As a result, we decided to create a comprehensive Geriatric Management System to help streamline healthcare management for seniors and provide peace of mind for their families
+            . Our project focuses on making eldercare more efficient, accessible, and connected through the use of technology. 
+            With features like health record management, appointment scheduling, emergency alerts, and wellness programs, we aim to create a platform that simplifies the caregiving process. 
+        <p>
+            We believe that small changes can lead
+          to significant improvements in your quality of life, and we're here to
+          guide you on your path to a healthier and happier you.
+        </p>        </p>
+      </div>
+      
+    </section>
+
+   
+    <section class="section_container contact_container" id="contact">
+      <h2 class="section__header">Contact Us</h2>
+      <div>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 15px; font-size: 16px;">
+                <strong>Phone:</strong> 
+                +91 63948 34281
+            </li>
+            <li style="margin-bottom: 15px; font-size: 16px;">
+                <strong>Email:</strong> geriatric@support.com
+            </li>
+            <li style="margin-bottom: 15px; font-size: 16px;">
+                <strong>Address:</strong> 123 Main Street, Bangalore, karnataka, 543212
+            </li>
+            <li style="margin-bottom: 15px; font-size: 16px;">
+                <strong>Social Media:</strong> 
+                <a href="https://facebook.com" target="_blank" style="text-decoration: none; color: #0077b6;">Facebook</a> | 
+                <a href="https://twitter.com" target="_blank" style="text-decoration: none; color: #0077b6;">Twitter</a> | 
+                <a href="https://instagram.com" target="_blank" style="text-decoration: none; color: #0077b6;">Instagram</a>
+            </li>
+        </ul>
+    </div>    </section>
+
+    <footer class="footer">
+      <div class="footer__bar">
+       <center> <p>Copyright © 2025 Geriatric Management System. All rights reserved.</p>
+       </center>
+       </div>
+    </footer>
+
+<script>
+    function toggleForm(formType) {
+      document.querySelectorAll('.auth-form').forEach(form => form.classList.remove('active'));
+      document.getElementById(formType).classList.add('active');
+      document.querySelectorAll('.auth-toggle button').forEach(btn => btn.classList.remove('active'));
+      document.querySelector(button[onclick="toggleForm('${formType}')"]).classList.add('active');
+    }
+  </script>
+  
+  </body>
+</html>

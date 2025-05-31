@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Elderly Care Management System</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        :root {
+  --primary-color: #12ac8e;
+  --primary-color-dark: #0d846c;
+  --primary-color-light: #e9f7f7;
+  --secondary-color: #fb923c;
+  --text-dark: #333333;
+  --text-light: #767268;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: var(--primary-color-light);
+            margin: 0;
+            padding: 0;
+      
+        }
+
+        .header {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            height: 9%;
+            z-index: 1000;
+        }
+
+        .nav__container {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__logo span {
+  color: var(--secondary-color);
+}
+        .title h2 {
+            margin-left: -110%;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 2px;
+            padding: 0;
+            margin: 0;
+        }
+        .navbar ul li{
+            margin-left:-30%;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #01624e;
+        }
+
+        .auth-container {
+            max-width: 400px;
+            margin: 7% auto;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        /* Section title styles */
+        .section-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            position: relative;
+        }
+        .nav__container {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__logo span {
+  color: var(--secondary-color);
+}
+.nav__logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+}
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: #0d846c;
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Card layout styles */
+        .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 cards per row */
+    gap: 25px;
+}
+
+
+        .card {
+            background: rgb(255, 255, 255);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #e0e0e0;
+            margin-left:10%;
+            margin-right:10%;
+            
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            border-color: #0d846c;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #0d846c;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: #555;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* Add some breathing space for mobile */
+        @media (max-width: 600px) {
+            header {
+                padding: 15px 10px;
+            }
+            .container {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="section__container nav__container">
+            <div class="nav__logo">Geriatric<span>Care</span></div>
+        
+             
+        </nav>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Elderly Care System Services -->
+        <h2 class="section-title">Elderly Care System Services</h2>
+
+        <div class="cards">
+            <div class="card">
+                
+                <h3>Elder Health Monitoring</h3>
+                <p>The system also stores past health data for easy access and decision-making. Regular updates ensure that any health irregularities can be detected early, ensuring timely medical intervention</p>   <p><strong>Benefits:</strong> Timely medication intake, prevents missed doses, peace of mind to caregivers.</p>
+            </div>
+            <div class="card">
+                <h3>Emergency Alert System (SOS)</h3>
+                <p>The Emergency Alert System is a one-click emergency notification system designed for quick and easy use in critical situations.</p>
+                <p><strong>Benefits:</strong> Immediate response, enhanced safety, reduces anxiety for family members.</p>
+            </div>
+            <div class="card">
+                <h3>Doctor Consultations</h3>
+                <p>This eliminates the need for travel, especially for those with mobility issues, and ensures continuous healthcare without waiting for physical appointments. It’s an easy and convenient way for elders to maintain regular medical checkups.</p>     </div>
+        </div>
+
+        <!-- Caretaker Services -->
+        <h2 class="section-title">Services Provided by Caretaker</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Personal Care Assistance</h3>
+                <p>Support with bathing, grooming, dressing, and hygiene activities.</p>
+            </div>
+            <div class="card">
+                <h3>Daily Activity Support</h3>
+                <p>Help with daily tasks like walking, exercising, and meal preparation.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Emotional Support & Companionship</h3>
+                <p>Friendly interaction and companionship to prevent loneliness and depression.</p>
+            </div>
+            <div class="card">
+                <h3>Mobility Assistance</h3>
+                <p>Helping elders move safely around the house and preventing falls.</p>
+            </div>
+            <div class="card">
+                <h3>Monitoring & Reporting</h3>
+                <p>Observation of health changes and reporting to family and healthcare providers.</p>
+            </div>
+            <div class="card">
+                <h3>Emergency Handling</h3>
+                <p>Immediate first aid and assistance during critical situations.</p>
+            </div>
+            <br><br><br>
+        </div>
+
+    </div>
+</body>
+</html>

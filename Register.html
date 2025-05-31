@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form | Geriatric Care</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS for consistency -->
+    <style>
+        :root {
+  --primary-color: #12ac8e;
+  --primary-color-dark: #0d846c;
+  --primary-color-light: #e9f7f7;
+  --secondary-color: #fb923c;
+  --text-dark: #333333;
+  --text-light: #767268;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: var(--primary-color-light);
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            height: 9%;
+            z-index: 1000;
+        }
+
+        .nav__container {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__logo span {
+  color: var(--secondary-color);
+}
+        .title h2 {
+            margin-left: -110%;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 2px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #01624e;
+        }
+
+        .auth-container {
+            max-width: 400px;
+            margin: 7% auto;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        input{
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        select{
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        } 
+
+        .form-rad {
+            display: flex;
+            margin-left: 10px;
+            padding-bottom: 10px;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        .nav__logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color-dark);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="section__container nav__container">
+            <div class="nav__logo">Geriatric<span>Care</span></div>
+        
+             
+        </nav>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="auth-container">
+        <h2>Registration Form</h2>
+        <form id="registerForm" action="register.php" method="post">
+            <select id="role" name="role" required>
+                <option value="">--Select Role--</option>
+                <option value="elder">Elder</option>
+                <option value="caretaker">Caretaker</option>
+            </select>
+            <input type="text" id="username" name="username" required placeholder="Enter your name">
+            <div class="form-rad">
+            
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="other">Others</label>
+                <input type="radio" id="other" name="gender" value="other" required>
+               
+            </div>
+            <input type="number" id="age" name="age" min="1" max="120" required placeholder="Enter your age">
+            <input type="text" id="mobile_no" name="mobile_no" pattern="[0-9]{10}" title="Enter 10 digit mobile number" required placeholder="10 digit mobile number">
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            <input type="password" id="password" name="password" minlength="6" required placeholder="Minimum 6 characters">
+            <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" required placeholder="Re-enter password">
+            <button type="submit" class="btn">Register</button>
+            <h4>Already registered? <a href="loginpage.php">Login</a></h4>
+        </form>
+    </div>
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+        
+            // Regular Expression for Strong Password
+            let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        
+            if (!passwordPattern.test(password)) {
+                alert("Password must be at least 8 characters long, contain one uppercase letter, one lowercase letter, one number, and one special character.");
+                event.preventDefault(); // Prevent form submission
+            } else if (password !== confirmPassword) {
+                alert("Passwords do not match. Please enter the same password.");
+                event.preventDefault();
+            }
+        });
+        </script>
+        
+</body>
+</html>
