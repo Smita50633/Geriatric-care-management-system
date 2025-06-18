@@ -6,13 +6,13 @@ require __DIR__ . '/vendor/autoload.php';
 use Twilio\Rest\Client;
 
 // Twilio credentials
-$sid = "AC23ab781639900367433e8a0c3977f183";
-$token = "5e678811209a993b7e34c667149a8923";
+$sid = "";
+$token = "";
 $twilio = new Client($sid, $token);
 
 // Ensure the phone number is in E.164 format
-$to = "+917411017326"; // Replace with valid number
-$from = "+18059940688"; // Your Twilio number
+$to = ""; // Replace with valid number
+$from = ""; // Your Twilio number
 
 try {
     $message = $twilio->messages->create(
