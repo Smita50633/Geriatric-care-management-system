@@ -5,8 +5,8 @@ session_regenerate_id(true); // Security improvement
 // Database connection
 $host = 'localhost';
 $user = 'root';
-$pass = 'Smita@03';
-$db = 'geriatric_care';
+$pass = '';
+$db = '';
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); // Enable error reporting
 $conn = new mysqli($host, $user, $pass, $db);
