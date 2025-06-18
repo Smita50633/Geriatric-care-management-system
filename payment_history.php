@@ -7,7 +7,7 @@ if (!isset($_SESSION['elder_id'])) {
 
 $elder_id = $_SESSION['elder_id'];
 
-$conn = new mysqli("localhost", "root", "Smita@03", "geriatric_care");
+$conn = new mysqli("localhost", "root", "", "");
 $conn->set_charset("utf8mb4");
 
 if ($conn->connect_error) {
