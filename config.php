@@ -8,8 +8,8 @@ if (session_status() == PHP_SESSION_NONE) {
 // Database credentials
 $servername = "localhost"; // Change if using a remote database
 $username = "root";        // MySQL username (default for XAMPP)
-$password = "Smita@03";            // MySQL password (default is empty for XAMPP)
-$database = "geriatric_care"; // Replace with your actual database name
+$password = "";            // MySQL password (default is empty for XAMPP)
+$database = ""; // Replace with your actual database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
