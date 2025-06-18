@@ -9,7 +9,7 @@ if (!isset($_SESSION['caretaker_id'])) {
 $caretaker_id = $_SESSION['caretaker_id'];
 
 // Database connection
-$conn = new mysqli("localhost", "root", "Smita@03", "geriatric_care");
+$conn = new mysqli("localhost", "root", "", "");
 $conn->set_charset("utf8mb4");
 
 if ($conn->connect_error) {
