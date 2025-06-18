@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Database connection
-    $conn = new mysqli("localhost", "root", "Smita@03", "geriatric_care");
+    $conn = new mysqli("localhost", "root", "", "");
     
     if ($conn->connect_error) {
         die("Database connection failed: " . $conn->connect_error);
